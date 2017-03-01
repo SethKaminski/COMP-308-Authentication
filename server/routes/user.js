@@ -16,11 +16,11 @@ router.get('/login', (req, res, next) => {
     res.render('user/login', {
       title: 'Login',
       messages: req.flash('loginMessage'),
-      displayName: req.user ? req.user.displayName : ''
+      username: req.user ? req.user.username : ''
     });
     return;
   } else {
-    return res.redirect('/'); // redirect to the games list
+    return res.redirect('/');
   }
 });
 
@@ -38,9 +38,8 @@ router.get('/register', (req, res, next) =>{
     // render the registration page
     res.render('user/register', {
       title: 'Register',
-      games: '',
       messages: req.flash('registerMessage'),
-      displayName: req.user ? req.user.displayName : ''
+      username: req.user ? req.user.username : ''
     });
   }
 });
@@ -52,7 +51,7 @@ router.post('/register', (req, res, next) => {
         username: req.body.username,
         //password: req.body.password,
         email: req.body.email,
-        displayName: req.body.displayName
+        username: req.body.username
       }),
       req.body.password,
       (err) => {
@@ -63,9 +62,8 @@ router.post('/register', (req, res, next) => {
           }
           return res.render('user/register', {
             title: 'Register',
-            games: '',
             messages: req.flash('registerMessage'),
-            displayName: req.user ? req.user.displayName : ''
+            username: req.user ? req.user.username : ''
           });
         }
         // if registration is successful
