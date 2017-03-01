@@ -2,7 +2,7 @@ let express = require('express');
 let router = express.Router();
 
 let passport = require('passport');
-let UserModel = require('../models/user');
+let UserModel = require('../models/users');
 let User = UserModel.User;
 
 //check if authenticated

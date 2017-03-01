@@ -4,7 +4,7 @@ let router = express.Router();
 let mongoose = require('mongoose');
 let game = require('../models/games');
 
-let UserModel = require('../models/user');
+let UserModel = require('../models/users');
 let User = UserModel.User;
 
 //check if authenticated

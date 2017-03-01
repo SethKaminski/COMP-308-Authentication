@@ -28,7 +28,7 @@ db.once('open', () => {
 
 let index = require('./routes/index');
 let games = require('./routes/games');
-let auth = require('./routes/auth');
+let user = require('./routes/user');
 
 let app = express();
 
@@ -58,10 +58,10 @@ app.use(passport.session());
 
 app.use('/', index);
 app.use('/games', games);
-app.use('/auth', auth);
+app.use('/user', user);
 
 // passport user config
-let UserModel = require('./models/user');
+let UserModel = require('./models/users');
 let User = UserModel.User;
 passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser());
