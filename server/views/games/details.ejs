@@ -1,0 +1,28 @@
+<% include ../partials/header.ejs %>
+<div class="panel-body">
+  <div class="col-md-2">
+  </div>
+  <div class="col-md-8">
+    <h3>Games</h3>
+    <table class="table">
+      <tr>
+        <th> Name </th>
+        <th> Rating </th>
+        <th> Cost </th>
+      </tr>
+      <form method="post">
+        <tr>
+          <td> <input type="text" class="form-control" name="name" placeholder="Name" required value="<%= games.name %>"> </td>
+          <td> <input type="text" class="form-control" name="rating" placeholder="Rating" required value="<%= games.rating %>"> </td>
+          <td> <input type="text" class="form-control" name="cost" placeholder="Cost" required value="<%= games.cost %>"> </td>
+        </tr>
+        <tr>
+          <td>  </td>
+          <td>  </td>
+          <td> <button type="submit" class="btn btn-default"> <%=buttonText%> </button> </td>
+        </tr>
+      </form>
+    </table>
+  </div>
+</div>
+<% include ../partials/footer.ejs %> 
