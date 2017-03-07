@@ -32,9 +32,12 @@
                     <li 
                         <% if(title == "Contact") { %> class="active" <% } %>
                     ><a href="/Contact"> Contact </a></li>
-                    <li 
-                        <% if(title == "Contacts") { %> class="active" <% } %>
-                    ><a href="/Contact"> Contacts </a></li>
+                    <% if(username) { %>
+                        <li 
+                            <% if(title == "Contacts") { %> class="active" <% } %>
+                        ><a href="/contacts"> Contacts </a></li>
+                    <% } %> 
+                    
                     
                     <!-- <li>
                         <% if(title == "Games") { %> class="active" <% } %>
