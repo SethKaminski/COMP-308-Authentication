@@ -30,6 +30,7 @@ router.get('/', requireAuth, (req, res, next) => {
 
         return 0;
       });
+      contacts.sort();
       res.render('contacts/index', {
          title: 'Contacts',
           contacts: contacts,
