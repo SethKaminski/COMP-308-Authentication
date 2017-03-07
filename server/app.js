@@ -25,7 +25,6 @@ db.once('open', () => {
   console.log("Connected to MongoDB");
 })
 
-
 let index = require('./routes/index');
 let games = require('./routes/games');
 let user = require('./routes/user');

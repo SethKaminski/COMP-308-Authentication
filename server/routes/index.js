@@ -15,7 +15,6 @@ function requireAuth(req, res, next) {
 
 /* GET home page. */
 router.get('/', (req, res, next) => {
-  console.log(req.user);
   res.render('content/index', { 
     title: 'Home',
     username: req.user ? req.user.username : '' });
