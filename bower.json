@@ -1,12 +1,12 @@
 {
-  "name": "308lab1",
+  "name": "COMP-308-Authentication",
   "description": "",
   "main": "server.js",
   "authors": [
     "Seth"
   ],
   "license": "ISC",
-  "homepage": "https://github.com/SethKaminski/308lab1",
+  "homepage": "https://github.com/SethKaminski/COMP-308-Authentication",
   "ignore": [
     "**/.*",
     "node_modules",

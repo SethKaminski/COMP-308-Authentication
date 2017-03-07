@@ -5,7 +5,7 @@
  */
 
 let app = require('./server/app');
-let debug = require('debug')('308lab1:server');
+let debug = require('debug')('COMP-308-Authentication:server');
 let http = require('http');
 
 /**
