@@ -1,0 +1,28 @@
+<% include ../partials/header.ejs %>
+<div class="panel-body">
+  <div class="col-md-2">
+  </div>
+  <div class="col-md-8">
+    <h3>Contacts Details</h3>
+    <table class="table">
+      <tr>
+        <th> Name </th>
+        <th> Phone Number </th>
+        <th> Email </th>
+      </tr>
+      <form method="post">
+        <tr>
+          <td> <input type="text" class="form-control" name="name" placeholder="Name" required value="<%= contacts.name %>"> </td>
+          <td> <input type="text" class="form-control" name="number" placeholder="Phone Numbe" required value="<%= contacts.number %>"> </td>
+          <td> <input type="text" class="form-control" name="email" placeholder="Email" required value="<%= contacts.email %>"> </td>
+        </tr>
+        <tr>
+          <td>  </td>
+          <td>  </td>
+          <td> <button type="submit" class="btn btn-default btn-warning"> <%=buttonText%> </button> </td>
+        </tr>
+      </form>
+    </table>
+  </div>
+</div>
+<% include ../partials/footer.ejs %> 

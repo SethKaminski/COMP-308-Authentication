@@ -9,9 +9,9 @@ let User = UserModel.User;
 
 //check if authenticated
 function requireAuth(req, res, next) {
-  /*if(!req.isAuthenticated()) {
-    return res.redirect('/auth/login');
-  }*/
+  if(!req.isAuthenticated()) {
+    return res.redirect('/user/login');
+  }
   next();
 }
 
@@ -23,7 +23,8 @@ router.get('/', requireAuth, (req, res, next) => {
     } else {
       res.render('games/index', {
          title: 'Games',
-        games: games });
+          games: games,
+          username: req.user ? req.user.username : '' });
     }
   });
 });
@@ -39,7 +40,8 @@ router.get('/edit/:id', requireAuth, (req, res, next) => {
         res.render('games/details', {
           title: 'Edit Games',
           buttonText: 'Edit',
-          games: games });
+          games: games,
+          username: req.user ? req.user.username : '' });
     }
   });
 });
@@ -82,7 +84,8 @@ router.get('/add', requireAuth, (req, res, next) => {
     res.render('games/details', {
         title: 'Add Games',
         buttonText: 'Add',
-        games: ''});
+        games: '',
+        username: req.user ? req.user.username : ''});
 });
 
 /* Post Add Game page. */
